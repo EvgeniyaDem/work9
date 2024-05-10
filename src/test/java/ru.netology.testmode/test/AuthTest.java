@@ -70,7 +70,7 @@ class AuthTest {
     void shouldGetErrorIfWrongPassword() {
         var registeredUser = getRegisteredUser("active");
         var wrongPassword = getRandomPassword();
-        $("[data-test-id='login'] input").setValue(registeredUser.getlogin());
+        $("[data-test-id='login'] input").setValue(registeredUser.getLogin());
         $("[data-test-id='password'] input").setValue(wrongPassword);
         $("button.button").click();
         $("[data-test-id='error-notification'] .notification__content")
